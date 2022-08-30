@@ -89,7 +89,7 @@ class UserSession {
   String _schoolBase64 = "";
 
   ///Die base url von allen API Endpunkten.
-  final String apiBaseUrl = "https://hepta.webuntis.com";
+  final String apiBaseUrl = "https://herakles.webuntis.com";
 
   ///JsonRPC endpoint. Überlicherweise: https://hepta.webuntis.com/WebUntis/jsonrpc.do?school=bbs1-mainz
   String rpcUrl = "";

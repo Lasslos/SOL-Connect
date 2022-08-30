@@ -16,7 +16,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
   final twoFactorController = TextEditingController();
-  final schoolController = TextEditingController(text: "bbs1-mainz");
+  final schoolController = TextEditingController(text: "cjd-königswinter");
   final passwordFocusNode = FocusNode();
   final schoolFocusNode = FocusNode();
 
@@ -34,11 +34,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   Future<void> getUserDataFromStorage() async {
     final username = await ref.read(timeTableService).getUserName();
     final password = await ref.read(timeTableService).getPassword();
-    const school = "bbs1-mainz";
+    const school = "cjd-königswinter";
 
     usernameController.text = username;
     passwordController.text = password;
-    schoolController.text = "bbs1-mainz";
+    schoolController.text = "cjd-königswinter";
 
     if (username.isNotEmpty && password.isNotEmpty && school.isNotEmpty) {
       ref.read(timeTableService).login(
