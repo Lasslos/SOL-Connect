@@ -15,7 +15,7 @@ class CreatedByText extends ConsumerWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: "Created with 🔥 by ",
+            text: "Created by ",
             style: TextStyle(color: theme.colors.textInverted, fontStyle: FontStyle.italic),
           ),
           TextSpan(
@@ -44,6 +44,22 @@ class CreatedByText extends ConsumerWidget {
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 launchUrlString("https://github.com/DevKevYT");
+              },
+          ),
+          TextSpan(
+            text: " - Modified by ",
+            style: TextStyle(color: theme.colors.textInverted, fontStyle: FontStyle.italic),
+          ),
+          TextSpan(
+            text: "Lasslos",
+            style: const TextStyle(
+              color: Colors.blue,
+              fontStyle: FontStyle.italic,
+              decoration: TextDecoration.underline,
+            ),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                launchUrlString("https://github.com/Lasslos");
               },
           ),
         ],

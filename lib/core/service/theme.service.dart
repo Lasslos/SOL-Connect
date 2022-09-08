@@ -14,9 +14,9 @@ class ThemeService with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> saveAppearence(bool lightMode) async {
+  Future<void> saveAppearence(bool darkMode) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setBool("lightMode", lightMode);
+    prefs.setBool("lightMode", !darkMode);
     toggleTheming();
   }
 
